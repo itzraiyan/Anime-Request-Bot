@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: anime-request-bot
+    runtime: python
+    pythonVersion: "3.11.11"
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python -m bot.main"
+    envVars:
+      - key: BOT_TOKEN
+        value: 7837295685:AAHILdUL6eGci1PM9xRD8d2VmVs0fBieDcQ
+      - key: API_ID
+        value: 26684254
+      - key: API_HASH
+        value: fc836096a68be3a4fcd7594cb3d9326f
+      - key: MONGO_URI
+        value: mongodb+srv://jokes:jokes@cluster0.6twp3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      - key: ADMIN_IDS
+        value: "6161189904"
+      - key: OWNER_USERNAME
+        value: @Rai_Yan_00
+      - key: CLEANUP_DAYS
+        value: "30"
+      - key: TIMEZONE
+        value: Asia/Dhaka
+    instanceType: free
+    autoDeploy: true
